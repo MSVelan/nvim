@@ -10,6 +10,8 @@ return {
 		keys = {
 			{ "\\", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
 		},
-		opts = {},
+		opts = {
+			view = { adaptive_size = true },
+		},
 	},
 }

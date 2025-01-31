@@ -138,4 +138,3 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
--- require("plugins.custom.load_test_lsp")
