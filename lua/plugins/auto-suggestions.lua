@@ -110,7 +110,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "path" },
-					{ name = "render-markdown" },
+					--					{ name = "render-markdown" },
 				},
 				experimental = {
 					ghost_text = true,

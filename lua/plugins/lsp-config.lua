@@ -172,7 +172,23 @@ return {
 			local servers = {
 				clangd = {},
 				gopls = {},
-				pyright = {},
+				pyright = {
+					capabilities = {
+						textDocument = {
+							publishDiagnostics = {
+								tagSupport = {
+									valueSet = { 2 },
+								},
+							},
+						},
+					},
+					python = {
+						disableOrganizeImports = true, -- Using Ruff
+						analysis = {
+							diagnosticMode = "off",
+						},
+					},
+				},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
@@ -182,7 +198,16 @@ return {
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				-- ts_ls = {},
 				--
-
+				ruff = {
+					capabilities = {
+						textDocument = {
+							completion = {
+								dynamicRegistration = false,
+								completionProvider = false, -- Disable code completion
+							},
+						},
+					},
+				},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
